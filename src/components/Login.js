@@ -39,18 +39,15 @@ const Login = ({setLoginUser}) => {
   return (
 
     <div>
-      <div>
-        Login
-      </div>
-
       <form onSubmit={login}>
         <div>
-          <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Email"/>
+          <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Email" className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..."  required/>
         </div>
         <div>
-          <input type="password" name="password" value={user.password} onChange={handleChange} placeholder="Password"/>
+          <input type="password" name="password" value={user.password} onChange={handleChange} placeholder="Password" className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..."  required/>
         </div>
-        <button type="submit" >Log in
+        <button type="submit" className="bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 ...">
+          Log in
         </button>
       </form>
       <div>

@@ -24,27 +24,14 @@ function App() {
             <Link to="/">Home | </Link>
             {
               user && user._id ?
-            <Link to="/books"> Your Library |</Link> : null
+                <Link to="/books"> Your Library |</Link>
+                : <Link to="/register">Sign up |</Link>
             }
             {
               user && user._id ?
-            <Link to="/create-book"> Add to your library </Link>
-            : null
+                <Link to="/create-book"> Add to your library </Link>
+                : <Link to="/login"> Log in</Link>
             }
-
-            {
-              !user && !user._id ?
-            <Link to="/register">Sign up |</Link>
-            : null
-            }
-            {
-              !user && !user._id ?
-            <Link to="/login"> Log in</Link>
-            : null
-            }
-
-
-
 
           </nav>
           { user && user._id  ?
@@ -54,19 +41,19 @@ function App() {
           }
 
           <div>
-          <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/books">
-            {
-              user && user._id ? <BookList />:<Login setLoginUser={setLoginUser}/>
-            } </Route>
-            <Route exact path="/register" component={Register}/>
-            <Route exact path="/login" component={()=><Login setLoginUser={setLoginUser} />}/>
-          </Switch>
+            <Switch>
+              <Route exact path="/" component={Home}/>
+              <Route exact path="/books">
+              {
+                user && user._id ? <BookList />:<Login setLoginUser={setLoginUser}/>
+              } </Route>
+              <Route exact path="/register" component={Register}/>
+              <Route exact path="/login" component={()=><Login setLoginUser={setLoginUser} />}/>
+            </Switch>
 
-            <Route exact path="/create-book" component={CreateBook}/>
-            <Route exact path="/edit-book/:id" component={UpdateBook}/>
-            <Route exact path="/books/:id" component={BookDetail}/>
+              <Route exact path="/create-book" component={CreateBook}/>
+              <Route exact path="/edit-book/:id" component={UpdateBook}/>
+              <Route exact path="/books/:id" component={BookDetail}/>
 
           </div>
 

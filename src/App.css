@@ -1,8 +1,10 @@
 
 body {
   background-color: rgba(166, 13, 199, 0.5);
+  background-image: url('images/library-image.jpeg');
   color:white;
   padding: 20px;
+  text-shadow: 2px 2px #000;
 }
 
 a {
