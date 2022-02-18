@@ -23,7 +23,6 @@ class CreateBook extends Component{
 
   _onSubmit(e) {
     e.preventDefault()
-    console.log("heloooo");
     const data = {
       title: this.state.title,
       author: this.state.author,
@@ -33,7 +32,7 @@ class CreateBook extends Component{
       published_date: this.state.published_date,
       publisher: this.state.publisher
     }
-    axios.post('http://localhost:3001/books', data)
+    axios.post('https://mern-library-back.herokuapp.com/books', data)
     .then((response) => {
       this.setState({
         title: '',

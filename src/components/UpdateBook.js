@@ -20,7 +20,7 @@ class UpdateBook extends Component {
 
   componentDidMount(){
     console.log(this.props.match.params.id);
-    axios.get(`http://localhost:3001/books/` + this.props.match.params.id).then((response) => {
+    axios.get(`https://mern-library-back.herokuapp.com/books` + this.props.match.params.id).then((response) => {
       console.log(response.data);
       this.setState({
         title: response.data.title,

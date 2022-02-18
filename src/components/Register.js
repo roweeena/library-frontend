@@ -24,7 +24,7 @@ const Register = () => {
     e.preventDefault();
     const { first_name, last_name, username, email, password } = user
     if ( first_name && last_name && username && email && password ){
-      axios.post("http://localhost:3001/register", user)
+      axios.post("https://mern-library-back.herokuapp.com/register", user)
       .then(
         res => {
           console.log(user);
