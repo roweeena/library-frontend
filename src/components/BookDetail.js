@@ -14,7 +14,7 @@ class BookDetail extends Component {
   }
   componentDidMount(){
     console.log(this.props.match.params.id);
-    axios.get(`https://mern-library-back.herokuapp.com/books` + this.props.match.params.id).then((response) => {
+    axios.get(`https://mern-library-back.herokuapp.com/books/` + this.props.match.params.id).then((response) => {
       console.log(response.data);
       this.setState({
         book: response.data
@@ -26,7 +26,7 @@ class BookDetail extends Component {
 
   _onDelete(){
     const bookId = this.props.match.params.id
-    axios.delete(`https://mern-library-back.herokuapp.com/books`+ bookId).then((response) => {
+    axios.delete(`https://mern-library-back.herokuapp.com/books/`+ bookId).then((response) => {
       this.props.history.push('/books')
     }).catch(err => {
       console.log(err);

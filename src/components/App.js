@@ -1,6 +1,6 @@
 import '../App.css'
 
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import BookDetail from './BookDetail'
 import BookList from './BookList'
 import CreateBook from './CreateBook'

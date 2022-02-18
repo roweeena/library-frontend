@@ -20,7 +20,7 @@ class UpdateBook extends Component {
 
   componentDidMount(){
     console.log(this.props.match.params.id);
-    axios.get(`https://mern-library-back.herokuapp.com/books` + this.props.match.params.id).then((response) => {
+    axios.get(`https://mern-library-back.herokuapp.com/books/` + this.props.match.params.id).then((response) => {
       console.log(response.data);
       this.setState({
         title: response.data.title,
@@ -45,7 +45,7 @@ class UpdateBook extends Component {
       published_date: this.state.published_date,
       publisher: this.state.publisher
     }
-    axios.put('http://localhost:3001/books/'+bookId, data)
+    axios.put('https://mern-library-back.herokuapp.com/books/'+bookId, data)
     .then((response) => {
       this.props.history.push('/books/'+bookId)
 
