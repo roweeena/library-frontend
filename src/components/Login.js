@@ -39,6 +39,7 @@ const Login = ({setLoginUser}) => {
   return (
 
     <div>
+    <h3>Log into The Library</h3>
       <form onSubmit={login}>
         <div>
           <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Email" className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..."  required/>

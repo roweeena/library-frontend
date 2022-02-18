@@ -11,7 +11,7 @@ class BookList extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:3001/books')
+    axios.get('https://mern-library-back.herokuapp.com/books/')
           .then(response => {
             this.setState({books: response.data})
           })
@@ -37,7 +37,7 @@ class BookList extends Component {
 
     return (
       <div>
-        <div className="container">
+        <div className="book-container">
           <h2> All the books</h2>
           <p> {bookList} </p>
         </div>

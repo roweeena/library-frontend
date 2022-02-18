@@ -41,7 +41,7 @@ const Register = () => {
   return (
     <div>
       <div>
-        Create a new account
+        <h3>Create a new account</h3>
       </div>
 
 

@@ -40,7 +40,7 @@ function App() {
             <h1>The Library</h1>
           }
 
-          <div>
+          <div className="container container-border">
             <Switch>
               <Route exact path="/" component={Home}/>
               <Route exact path="/books">
