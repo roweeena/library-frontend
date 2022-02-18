@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/library-frontend/static/css/main.5ccb8edd.chunk.css",
+    "main.js": "/library-frontend/static/js/main.ad5e71ba.chunk.js",
+    "main.js.map": "/library-frontend/static/js/main.ad5e71ba.chunk.js.map",
+    "runtime-main.js": "/library-frontend/static/js/runtime-main.800c0d10.js",
+    "runtime-main.js.map": "/library-frontend/static/js/runtime-main.800c0d10.js.map",
+    "static/js/2.347ae7c2.chunk.js": "/library-frontend/static/js/2.347ae7c2.chunk.js",
+    "static/js/2.347ae7c2.chunk.js.map": "/library-frontend/static/js/2.347ae7c2.chunk.js.map",
+    "static/js/3.a76d50fe.chunk.js": "/library-frontend/static/js/3.a76d50fe.chunk.js",
+    "static/js/3.a76d50fe.chunk.js.map": "/library-frontend/static/js/3.a76d50fe.chunk.js.map",
+    "index.html": "/library-frontend/index.html",
+    "static/css/main.5ccb8edd.chunk.css.map": "/library-frontend/static/css/main.5ccb8edd.chunk.css.map",
+    "static/js/2.347ae7c2.chunk.js.LICENSE.txt": "/library-frontend/static/js/2.347ae7c2.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/library-frontend/static/media/library-image.3bf955f8.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.800c0d10.js",
+    "static/js/2.347ae7c2.chunk.js",
+    "static/css/main.5ccb8edd.chunk.css",
+    "static/js/main.ad5e71ba.chunk.js"
+  ]
+}
