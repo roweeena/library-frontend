@@ -60,7 +60,9 @@ function App() {
 
         </Router>
 
-
+        <footer>
+          Copyright
+        </footer>
 
     </div>
   );
