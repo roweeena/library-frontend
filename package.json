@@ -1,6 +1,7 @@
 {
   "name": "mer-front",
   "version": "0.1.0",
+  "homepage": "https://angry-minsky-b43ce6.netlify.app/",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.3",
