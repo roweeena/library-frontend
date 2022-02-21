@@ -64,7 +64,7 @@ function App() {
         </Router>
 
         <footer>
-          Copyright
+          © Copyright Ro 2022
         </footer>
 
     </div>
