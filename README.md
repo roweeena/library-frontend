@@ -10,7 +10,7 @@ So far, I have been able to create a `Books` and `Users` model and associated th
 - Node
 - Express
 
-You can find the live link [here](https://roweeena.github.io/library-frontend/) 
+You can find the live link [here](https://angry-minsky-b43ce6.netlify.app/) 
 
 ### Next steps:
 - Authentication
