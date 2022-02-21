@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import '../App.css'
 
-const MERN_URL = "http://localhost:3001/books"
+const MERN_URL = "http://mern-library-back.herokuapp.com/books"
 
 class CreateBook extends Component{
   constructor() {

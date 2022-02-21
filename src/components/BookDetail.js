@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios'
 
-const MERN_URL = "http://localhost:3001/books/"
+const MERN_URL = "http://mern-library-back.herokuapp.com/books/"
 
 class BookDetail extends Component {
   constructor(props) {

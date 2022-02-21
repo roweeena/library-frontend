@@ -3,7 +3,7 @@ import axios from 'axios'
 import {Link, useHistory} from 'react-router-dom';
 
 
-const MERN_URL = "http://localhost:3001/login"
+const MERN_URL = "http://mern-library-back.herokuapp.com/login"
 
 const Login = ({setLoginUser}) => {
   const [user, setUser] = useState({

@@ -3,7 +3,7 @@ import axios from 'axios'
 import ShowBook from './ShowBook'
 
 
-const MERN_URL = "http://localhost:3001/books/"
+const MERN_URL = "http://mern-library-back.herokuapp.com/books/"
 
 class BookList extends Component {
   constructor(props) {
