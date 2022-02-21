@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import {Link, useHistory} from 'react-router-dom';
 
+const MERN_URL = "http://localhost:3001/register"
+
 const Register = () => {
   const [user, setUser] = useState({
     first_name: "",
@@ -24,7 +26,7 @@ const Register = () => {
     e.preventDefault();
     const { first_name, last_name, username, email, password } = user
     if ( first_name && last_name && username && email && password ){
-      axios.post("https://mern-library-back.herokuapp.com/register", user)
+      axios.post(MERN_URL, user)
       .then(
         res => {
           console.log(user);
@@ -34,7 +36,7 @@ const Register = () => {
         history.push("/")
       }
       ).catch ((err) => {console.log(err);
-      alert("invalid input", err)})
+      alert("Username or email has already been taken", err)})
     }
   }
 

@@ -21,6 +21,9 @@ function App() {
         <Router>
 
           <nav>
+          {
+            user && user._id ? <p>Welcome {user.username}</p> : null
+          }
             <Link to="/">Home | </Link>
             {
               user && user._id ?
@@ -48,7 +51,7 @@ function App() {
                 user && user._id ? <BookList />:<Login setLoginUser={setLoginUser}/>
               } </Route>
               <Route exact path="/register" component={Register}/>
-              <Route exact path="/login" component={()=><Login setLoginUser={setLoginUser} />}/>
+              <Route exact path="/login" component={()=> <Login setLoginUser={setLoginUser} />}/>
             </Switch>
 
               <Route exact path="/create-book" component={CreateBook}/>

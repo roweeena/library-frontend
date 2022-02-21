@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import '../App.css'
 
+const MERN_URL = "http://localhost:3001/books"
+
 class CreateBook extends Component{
   constructor() {
     super();
@@ -33,14 +35,14 @@ class CreateBook extends Component{
       published_date: this.state.published_date,
       publisher: this.state.publisher
     }
-    axios.post('https://mern-library-back.herokuapp.com/books', data)
+    axios.post(MERN_URL, data)
     .then((response) => {
       console.log(response);
 
-      this.props.history.push('/books')
+    //  this.props.history.push('/books')
 
     }).catch((err) =>{
-      console.log('hope');
+      console.log(err);
     })
 
   }
@@ -56,25 +58,25 @@ class CreateBook extends Component{
         <h3> Add a book to the library</h3>
         <form onSubmit={this._onSubmit} >
           <div>
-            <input type="text" placeholder="Title" name="title" onChange={this._onChange} value={this.state.title} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..." required/>
+            <input type="text" placeholder="Title" name="title" onChange={this._onChange} value={this.state.title} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..."  />
           </div>
           <div>
-            <input type="text" placeholder="Author" name="author" onChange={this._onChange} value={this.state.author} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..." required/>
+            <input type="text" placeholder="Author" name="author" onChange={this._onChange} value={this.state.author} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..." />
           </div>
           <div>
             <input type="text" placeholder="Description" name="description" onChange={this._onChange} value={this.state.description} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..."/>
           </div>
           <div>
-            <input type="date" placeholder="Date of Publication" name="published_date" onChange={this._onChange} value={this.state.published_date} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..." required/>
+            <input type="date" placeholder="Date of Publication" name="published_date" onChange={this._onChange} value={this.state.published_date} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..." />
           </div>
           <div>
-            <input type="file" placeholder="Image" name="image" onChange={this._onChange} value={this.state.image} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..." required/>
+            <input type="file" placeholder="Image" name="image" onChange={this._onChange} value={this.state.image} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..." />
           </div>
           <div>
             <input type="text" placeholder="Publisher" name="publisher" onChange={this._onChange} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..." value={this.state.publisher}/>
           </div>
           <div>
-            <input type="text" placeholder="ISBN" name="isbn" onChange={this._onChange} value={this.state.isbn} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..." required/>
+            <input type="text" placeholder="ISBN" name="isbn" onChange={this._onChange} value={this.state.isbn} className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ..." />
           </div>
           <div>
             <button type="submit" className="bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 ...">Add book</button>

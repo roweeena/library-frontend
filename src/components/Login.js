@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import {Link, useHistory} from 'react-router-dom';
 
+
+const MERN_URL = "http://localhost:3001/login"
+
 const Login = ({setLoginUser}) => {
   const [user, setUser] = useState({
     email: "",
@@ -9,7 +12,6 @@ const Login = ({setLoginUser}) => {
   })
 
   const history = useHistory();
-  console.log(history, "history")
 
   const handleChange = (e) =>{
     const {name, value} = e.target
@@ -21,13 +23,13 @@ const Login = ({setLoginUser}) => {
 
   const login = (e) =>{
     e.preventDefault()
-    console.log(('click'));
-    axios.post("https://mern-library-back.herokuapp.com/login", user)
+    axios.post(MERN_URL, user)
       .then(
         res =>
          {
-           console.log("id", res.data.user._id)
+
           setLoginUser(res.data.user)
+          console.log(res.data)
           history.push("/books")
 
         }

@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
+
+const MERN_URL = "http://localhost:3001/books/"
+
 class UpdateBook extends Component {
   constructor(props){
     super()
@@ -20,7 +23,7 @@ class UpdateBook extends Component {
 
   componentDidMount(){
     console.log(this.props.match.params.id);
-    axios.get(`https://mern-library-back.herokuapp.com/books/` + this.props.match.params.id).then((response) => {
+    axios.get(MERN_URL + this.props.match.params.id).then((response) => {
       console.log(response.data);
       this.setState({
         title: response.data.title,
