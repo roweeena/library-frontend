@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import {Link, useHistory} from 'react-router-dom';
 
-const MERN_URL = "http://mern-library-back.herokuapp.com/register"
+const MERN_URL = "https://mern-library-back.herokuapp.com/register"
 
 const Register = () => {
   const [user, setUser] = useState({

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 
-const MERN_URL = "http://mern-library-back.herokuapp.com/books/"
+const MERN_URL = "https://mern-library-back.herokuapp.com/books/"
 
 class UpdateBook extends Component {
   constructor(props){
@@ -48,7 +48,7 @@ class UpdateBook extends Component {
       published_date: this.state.published_date,
       publisher: this.state.publisher
     }
-    axios.put('https://mern-library-back.herokuapp.com/books/'+bookId, data)
+    axios.put(MERN_URL+bookId, data)
     .then((response) => {
       this.props.history.push('/books/'+bookId)
 
